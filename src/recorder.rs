@@ -3,7 +3,7 @@ use std::{
     sync::{Arc, PoisonError, RwLock},
 };
 
-use sentry::metrics as sm;
+use ::sentry::metrics as sm;
 
 type Units = Arc<RwLock<HashMap<metrics::KeyName, sm::MetricUnit>>>;
 
@@ -117,7 +117,7 @@ fn convert_unit(unit: metrics::Unit) -> sm::MetricUnit {
         Unit::Microseconds => Duration(MicroSecond),
         Unit::Nanoseconds => Duration(NanoSecond),
         Unit::Tebibytes => Information(TebiByte),
-        Unit::Gigibytes => Information(GibiByte),
+        Unit::Gibibytes => Information(GibiByte),
         Unit::Mebibytes => Information(MebiByte),
         Unit::Kibibytes => Information(KibiByte),
         Unit::Bytes => Information(Byte),

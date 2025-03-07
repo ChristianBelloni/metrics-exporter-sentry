@@ -15,12 +15,12 @@ missing_docs = "warn"
 
 
 [dependencies]
-metrics = "0.22"
-sentry = { version = "0.32", default-features = false, features = ["UNSTABLE_metrics"] }
+metrics = "0.24"
+sentry = { version = "0.36", default-features = false, features = ["metrics"] }
 
 
 [dev-dependencies]
-sentry = "0.32"
+sentry = "0.36"
 
 
 # docs.rs-specific configuration
